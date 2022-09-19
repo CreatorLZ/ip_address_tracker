@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
 
 
-const Container = styled.div`
+const Container = styled.main`
 background: url("./images/pattern-bg.png") ;
   width: 100vw;
   height: 300px;
@@ -125,7 +125,17 @@ align-items: center;
 justify-content: center;
 `;
 
-
+const Footer = styled.footer`
+width: 100vw;
+padding: 10px;
+font-size: 14px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: whitesmoke;
+color: black;
+font-weight: bold;
+`
 
 const Header = () => {
 const [ipError, setIpError] = useState("");
@@ -254,6 +264,7 @@ useEffect(() => {
   </Marker>
   <RecenterAutomatically lat={lat} lng={lng} />
 </MapContainer>
+<Footer>By CreatorLZ</Footer>
    </Wrapper>
   )
 }
